@@ -1,0 +1,22 @@
+#!/bin/bash
+
+
+IDS=""
+for id in $( echo $CUDA_VISIBLE_DEVICES | sed 's/,/ /g' )
+do
+	IDS=${IDS}$( nvidia-smi -L | grep $id | cut -f 2 -d' ' | sed 's/:/,/')
+done
+
+export CUDA_VISIBLE_DEVICES=$( echo $IDS | sed 's/,$//' )
+
+eval "$(/home/$(whoami)/miniconda3/bin/conda shell.bash hook)"
+
+# if you're using a conda virtual environment uncomment the following
+# line and replace your-env-name with the environment name
+#conda activate base
+
+file_ps=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+
+export LD_LIBRARY_PATH=$file_ps/libGL.so.1:${LD_LIBRARY_PATH}
+
+python $1 ${@:2}
