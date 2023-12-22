@@ -1,4 +1,4 @@
-# orange_grid
+# condor_src
 
 DO NOT INSTALL ANYTHING WITH   `conda install`
 
