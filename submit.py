@@ -18,9 +18,12 @@ def condor_submit(path,arguments):
         file.writelines(get_sub_str(arguments))
     subprocess.run(["rm log & condor_submit sub"], cwd=path, shell=True)
 
-if __name__ == '__main__':
+def quick_start():
     file_path=os.path.abspath(__file__)
     current_path =  os.path.abspath(os.path.dirname(file_path) + os.path.sep + ".")
     py_file = current_path + '/test.py '
     condor_submit(current_path + '/condor/test_1' , py_file + '-str world_1')
     condor_submit(current_path + '/condor/test_2' , py_file + '-str world_2')
+
+if __name__ == '__main__':
+    quick_start()
