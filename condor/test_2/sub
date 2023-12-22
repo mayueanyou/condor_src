@@ -1,8 +1,0 @@
-executable = /home/yma183/lab/orange_grid/conda_wrapper
-arguments = /home/yma183/lab/orange_grid/test.py -str world
-error= ./err
-output= ./out
-log= ./log
-Requirements = (TotalGPUs > 0)
-+request_gpus = 1
-queue
