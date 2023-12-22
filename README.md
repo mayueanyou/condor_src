@@ -18,6 +18,10 @@ USE `pip install` instead
 
 https://github.com/mayueanyou/libGL.so.1 
 
+## quick start
+
+`python3 submit.py`
+
 ## condor functions
 
 ### check gpus
