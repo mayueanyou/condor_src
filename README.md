@@ -20,7 +20,7 @@ https://github.com/mayueanyou/libGL.so.1
 
 ## condor functions
 
-## check gpus
+### check gpus
 
 `condor_status -compact -constraint 'TotalGPUs>0' -af:h machine TotalGPUs CUDADeviceName CUDACapability CUDADriverVersion CUDAGlobalMemoryMb CUDAComputeUnits CUDACoresPerCU HasNvidiaDriver`
 
