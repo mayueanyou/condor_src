@@ -24,7 +24,7 @@ def quick_start():
     current_path =  os.path.abspath(os.path.dirname(file_path) + os.path.sep + ".")
     py_file = current_path + '/test.py'
     condor_submit(current_path + '/condor/test_1', py_file, '-str world_1')
-    condor_submit(current_path + '/condor/test_2', py_file, '-str world_2')
+    #condor_submit(current_path + '/condor/test_2', py_file, '-str world_2')
 
 if __name__ == '__main__':
     quick_start()

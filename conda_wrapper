@@ -19,4 +19,7 @@ file_ps=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 export LD_LIBRARY_PATH=$file_ps/libGL.so.1:${LD_LIBRARY_PATH}
 
+nvidia-smi
+echo "The GPU ID is $IDS"
+
 python $1 ${@:2}
