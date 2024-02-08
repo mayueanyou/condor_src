@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 IDS=""
 for id in $( echo $CUDA_VISIBLE_DEVICES | sed 's/,/ /g' )
 do
@@ -20,6 +19,9 @@ file_ps=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 export LD_LIBRARY_PATH=$file_ps/libGL.so.1:${LD_LIBRARY_PATH}
 
 nvidia-smi
+echo "---------------"
 echo "The GPU ID is $IDS"
+echo "---------------"
+echo ""
 
 python $1 ${@:2}
