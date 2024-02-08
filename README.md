@@ -14,10 +14,6 @@ USE `pip install` instead
 
 `conda init`
 
-## if missing libGL.so.1
-
-https://github.com/mayueanyou/libGL.so.1 
-
 ## quick start
 
 `python3 submit.py`
