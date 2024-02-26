@@ -18,6 +18,16 @@ USE `pip install` instead
 
 `python3 submit.py`
 
+## condor sumbit 
+
+### avoid a machine
+
+`(Machine != "SURGE-OG-10-5-136-236")`
+
+### avoid a GPU
+
+`CUDADeviceName != "Quadro RTX 6000"`
+
 ## condor functions
 
 ### check gpus
