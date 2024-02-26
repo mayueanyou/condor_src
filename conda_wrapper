@@ -17,7 +17,8 @@ eval "$(/home/$(whoami)/miniconda3/bin/conda shell.bash hook)"
 file_ps=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 export LD_LIBRARY_PATH=$file_ps/libGL.so.1:${LD_LIBRARY_PATH}
-#source $file_ps/extra_path.bash
+# if you have any other environment variables need to be set up, just put it below
+export PYTHONPATH=$PYTHONPATH:/home/yma183/python_packages
 
 nvidia-smi
 echo "---------------"
