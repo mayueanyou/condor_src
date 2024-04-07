@@ -12,7 +12,7 @@ eval "$(/home/$(whoami)/miniconda3/bin/conda shell.bash hook)"
 
 # if you're using a conda virtual environment uncomment the following
 # line and replace your-env-name with the environment name
-#conda activate base
+conda activate $1
 
 file_ps=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
@@ -26,4 +26,4 @@ echo "The GPU ID is $IDS"
 echo "---------------"
 echo ""
 
-python $1 ${@:2}
+python $2 ${@:3}
