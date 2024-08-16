@@ -20,6 +20,8 @@ export LD_LIBRARY_PATH=$file_ps/libGL.so.1:${LD_LIBRARY_PATH}
 # if you have any other environment variables need to be set up, just put it below
 export PYTHONPATH=$PYTHONPATH:/home/yma183/python_packages
 
+hostname
+
 nvidia-smi
 echo "---------------"
 echo "The GPU ID is $IDS"
