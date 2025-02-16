@@ -1,7 +1,7 @@
 import os,sys,subprocess
 
 class CondorController:
-    def __init__(self,base_path:str,py_file:str,condor_version:str='base',ignore_machine:list=[],extra_requirements:str='') -> None:
+    def __init__(self,base_path:str,py_file:str,condor_version:str='base',ignore_machine:list =[],extra_requirements:str='') -> None:
         self.base_path = base_path
         self.py_file = py_file
         self.condor_version = condor_version
@@ -20,13 +20,13 @@ class CondorController:
                 f'queue']
         return lines
     
-    def submit(self,sub_path, py_arguments):
+    def submit(self,sub_path, py_arguments,sub=True):
         path = self.base_path + sub_path
         if not os.path.exists(path):os.makedirs(path)
         arguments = self.py_file + ' ' + py_arguments
         with open(path+"/sub", "w") as file:
             file.writelines(self.generate_sub_str(arguments,path))
-        subprocess.run(["rm log & condor_submit sub"], cwd=path, shell=True)
+        if sub: subprocess.run(["rm log & condor_submit sub"], cwd=path, shell=True)
 
 
 def quick_start():
