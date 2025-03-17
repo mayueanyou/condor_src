@@ -1,9 +1,0 @@
-README.md
-setup.py
-condor_src/__init__.py
-condor_src/condor_controller.py
-condor_src/submit.py
-condor_src.egg-info/PKG-INFO
-condor_src.egg-info/SOURCES.txt
-condor_src.egg-info/dependency_links.txt
-condor_src.egg-info/top_level.txt
