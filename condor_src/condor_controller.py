@@ -27,14 +27,3 @@ class CondorController:
         with open(path+"/sub", "w") as file:
             file.writelines(self.generate_sub_str(arguments,path))
         if sub: subprocess.run(["rm log & condor_submit sub"], cwd=path, shell=True)
-
-
-def quick_start():
-    file_path = os.path.abspath(__file__)
-    current_path =  os.path.abspath(os.path.dirname(file_path) + os.path.sep + ".")
-    condor_controller = CondorController(base_path = current_path + '/condor/', py_file = current_path + '/test.py',condor_version='py3.10')
-    condor_controller.submit(sub_path = 'test_1', py_arguments = '-str world_1')
-    condor_controller.submit(sub_path = 'test_2', py_arguments = '-str world_2')
-
-if __name__ == "__main__":
-    quick_start()

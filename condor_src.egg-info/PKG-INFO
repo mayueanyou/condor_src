@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: condor-src
+Version: 1.0
+Summary: A HTCondor library for python
+Home-page: https://github.com/mayueanyou/condor_src
+Author: Yue Ma
+Author-email: mayueanyou@gmail.com
+License: MIT

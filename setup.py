@@ -2,8 +2,8 @@ from setuptools import setup, find_packages
 
 
 setup(
-  name = 'condor_src',         # How you named your package folder (MyLib)
-  version = '0.1.0',
+  name = 'condor_src',
+  version="1.0",
   license='MIT',
   description = 'A HTCondor library for python',
   author = 'Yue Ma',
