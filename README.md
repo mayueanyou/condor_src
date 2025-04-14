@@ -1,5 +1,11 @@
 # condor_src
 
+This repository contains tools/code for performing batch uploads for [HTCondor](https://htcondor.org/).
+
+# Notice
+
+To ignore issues.
+
 DO NOT INSTALL ANYTHING WITH   `conda install`
 
 USE `pip install` instead
@@ -18,7 +24,7 @@ USE `pip install` instead
 
 `python3 submit.py`
 
-## condor sumbit 
+## condor sumbit
 
 ### avoid a machine
 
@@ -46,6 +52,6 @@ USE `pip install` instead
 
 `condor_rm`
 
-### check priority 
+### check priority
 
 `condor_userprio`
