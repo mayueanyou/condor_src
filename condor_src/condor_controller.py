@@ -8,7 +8,7 @@ class CondorController:
         self.ignore_machine = ''.join([f'&&(Machine != "{machine}")' for machine in ignore_machine])
         self.extra_requirements = extra_requirements
         self.condor_script_path = os.path.abspath(os.path.dirname(os.path.abspath(__file__)) + os.path.sep + ".") + '/conda_wrapper'
-    
+
     def generate_sub_str(self,arguments,path):
         lines = [f'executable = {self.condor_script_path}\n',
                 f'arguments = {self.condor_version} {arguments}\n',

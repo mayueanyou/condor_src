@@ -13,4 +13,4 @@ def submit_wrap(sub_path,py_arguments):
 
 if __name__ == '__main__':
     submit_wrap('test_1','-str 1')
-    submit_wrap('test_2','-str 2')
+    #submit_wrap('test_2','-str 2')
