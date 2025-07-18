@@ -33,6 +33,6 @@ echo ""
 python "$2" "${@:3}"
 
 echo "---------------"
-echo 'Job Done'
+echo 'Job Done!'
 echo "---------------"
 exit $?
