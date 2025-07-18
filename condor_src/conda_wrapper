@@ -30,4 +30,9 @@ echo "The GPU ID is $IDS"
 echo "---------------"
 echo ""
 
-python $2 ${@:3}
+python "$2" "${@:3}"
+
+echo "---------------"
+echo 'Job Done'
+echo "---------------"
+exit $?
