@@ -37,6 +37,6 @@ class CondorController:
         with open(path+"/sub", "w") as file:
             file.writelines(self.generate_sub_str(arguments,path))
         
-        print(f"Generate Submission string: {arguments}")
-        print(f"Generate Submission path: {path}")
+        print(f"Generate Submission string: \n{arguments}")
+        print(f"Generate Submission path: \n{path}")
         if sub: subprocess.run(["rm log & condor_submit sub"], cwd=path, shell=True)
